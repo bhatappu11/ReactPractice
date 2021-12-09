@@ -8,6 +8,7 @@ import Functional from './pages/functional/Functional';
 import Class from './pages/class/Class';
 import ClassLifeCycle from './pages/classlifecycle/ClassLifeCycle';
 import FuncLifeCycle from './pages/functionlifecycle/FuncLifeCycle';
+import ReactHooks from './pages/hooks/ReactHooks';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/class" element={<Class />}></Route>
         <Route exact path="/classlifecycle" element={<ClassLifeCycle color="blue"/>}></Route>
         <Route exact path="/funclifecycle" element={<FuncLifeCycle />}></Route>
+        <Route exact path="/hooks" element={<ReactHooks />}></Route>
       </Routes>
     </div>
     </Router>
