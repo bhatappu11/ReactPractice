@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Routes, Route} from 'react-router-dom';
 import Home from './pages/home/Home';
 import Functional from './pages/functional/Functional';
 import Class from './pages/class/Class';
+import ClassLifeCycle from './pages/classlifecycle/ClassLifeCycle';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/props" element={<Props />}></Route>
         <Route exact path="/functional" element={<Functional />}></Route>
         <Route exact path="/class" element={<Class />}></Route>
+        <Route exact path="/classlifecycle" element={<ClassLifeCycle color="blue"/>}></Route>
       </Routes>
     </div>
     </Router>
