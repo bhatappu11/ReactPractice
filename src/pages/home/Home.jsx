@@ -16,6 +16,8 @@ function Home() {
                     <span style={{padding:'10px'}}></span>
                     <Link style={{ textDecoration: "none"}} to="/classlifecycle">CLASS_LIFECYCLE</Link>
                     <span style={{padding:'10px'}}></span>
+                    <Link style={{ textDecoration: "none"}} to="/funclifecycle">FUNCTION_LIFECYCLE</Link>
+                    <span style={{padding:'10px'}}></span>
             </div>
         </div>
     )
