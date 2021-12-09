@@ -6,11 +6,10 @@ function Home() {
         <div>
             <h2>React features</h2>
             <div>
-                <ul>
-                    <li>
-                        <Link style={{ textDecoration: "none"}} to="/state">STATE</Link>
-                    </li>
-                </ul>
+                    <Link style={{ textDecoration: "none"}} to="/state">STATE</Link>
+                    <span style={{padding:'10px'}}></span>
+                    <Link style={{ textDecoration: "none"}} to="/props">PROPS</Link>
+                    <span style={{padding:'10px'}}></span>
             </div>
         </div>
     )
