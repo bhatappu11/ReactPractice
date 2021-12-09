@@ -10,6 +10,8 @@ function Home() {
                     <span style={{padding:'10px'}}></span>
                     <Link style={{ textDecoration: "none"}} to="/props">PROPS</Link>
                     <span style={{padding:'10px'}}></span>
+                    <Link style={{ textDecoration: "none"}} to="/functional">FUNCTIONAL_COMPONENTS</Link>
+                    <span style={{padding:'10px'}}></span>
             </div>
         </div>
     )
