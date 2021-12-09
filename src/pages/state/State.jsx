@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 export default class State extends Component {
     constructor(props){
@@ -19,6 +20,7 @@ export default class State extends Component {
                 <h4>Features</h4>
                 <p>color is {this.state.color} and model is {this.state.model}</p>
                 <button onClick={this.handleColor}>Change color</button>
+                <div style={{padding: '10px'}}><Link style={{ textDecoration: "none"}} to="/">HOME</Link></div>                
             </div>
         )
     }
