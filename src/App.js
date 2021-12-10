@@ -16,6 +16,7 @@ import Login from './pages/login/Login';
 import AuthContext from './AuthContext';
 import HOC from './pages/hoc/HOC';
 import EnhancedLikes from './components/likecounter/LikeCounter';
+import Profiler from './pages/profiler/Profilers';
 
 function App() {
   const showPortal = false;
@@ -57,6 +58,7 @@ function App() {
         <Route exact path="/useref" element={<UseRef />}></Route>
         <Route exact path="/login" element={<AuthContext.Provider value={{ status: authstatus, login: login }}><Login /></AuthContext.Provider>}></Route>
         <Route exact path="/hoc" element={<EnhancedLikes />}></Route>
+        <Route exact path="/profiler" element={<Profiler />}></Route>
       </Routes>
     
     </Router>
