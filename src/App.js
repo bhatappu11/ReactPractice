@@ -11,6 +11,7 @@ import ClassLifeCycle from './pages/classlifecycle/ClassLifeCycle';
 import FuncLifeCycle from './pages/functionlifecycle/FuncLifeCycle';
 import ReactHooks from './pages/hooks/ReactHooks';
 import Modal from './components/modal/Modal';
+import UseRef from './pages/useref/UseRef';
 
 function App() {
   const showPortal = false;
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/classlifecycle" element={<ClassLifeCycle color="blue"/>}></Route>
         <Route exact path="/funclifecycle" element={<FuncLifeCycle />}></Route>
         <Route exact path="/hooks" element={<ReactHooks />}></Route>
+        <Route exact path="/useref" element={<UseRef />}></Route>
       </Routes>
     
     </Router>
