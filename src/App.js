@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import State from './pages/state/State';
 import Props from './pages/props/Props';
@@ -14,9 +14,24 @@ import Modal from './components/modal/Modal';
 
 function App() {
   const showPortal = false;
+  const [count, setCount] = useState(0);
+  const [showBubbling, setShowBubbling] = useState(false);
   const [showModal, setShowModal] = React.useState(false);
   const handleShowMessageClick = () => setShowModal(true)
   const handleCloseModal = () => setShowModal(false)
+  const handleShowBubblingClick = () => setShowBubbling(true);
+  const handleCloseBubbling = () => setShowBubbling(false);
+  const handleClick = () => {
+    setCount(count + 1);
+  }
+  function Child() {
+    return (
+      <div className="modal">
+        <button style={{marginRight:"30px"}} >Click Me</button>
+        <button onClick={handleCloseBubbling}>Close Bubbling</button>
+      </div>
+    );
+  }
   return (
     <div className="App">
     <Router>
@@ -64,6 +79,21 @@ function App() {
       ) : null}
     </div>
   </div>
+  <div onClick={handleClick}>
+        <p>Number of clicks: {count}</p>
+        <p>
+          Open up the browser DevTools
+          to observe that the button
+          is not a child of the div
+          with the onClick handler.
+        </p>
+        <button onClick={handleShowBubblingClick}>Demonstrate Portal Event Bubbling</button>
+        {showBubbling ? (<Modal>
+          <Child />
+        </Modal>
+        ) : null}
+
+      </div>
   </div>
   );
 }
