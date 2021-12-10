@@ -24,6 +24,8 @@ function Home() {
                     <span style={{padding:'10px'}}></span>
                     <Link style={{ textDecoration: "none"}} to="/login">LOGIN</Link>
                     <span style={{padding:'10px'}}></span>
+                    <Link style={{ textDecoration: "none"}} to="/hoc">HOC</Link>
+                    <span style={{padding:'10px'}}></span>
             </div>
         </div>
     )
