@@ -12,12 +12,18 @@ import FuncLifeCycle from './pages/functionlifecycle/FuncLifeCycle';
 import ReactHooks from './pages/hooks/ReactHooks';
 import Modal from './components/modal/Modal';
 import UseRef from './pages/useref/UseRef';
+import Login from './pages/login/Login';
+import AuthContext from './AuthContext';
 
 function App() {
   const showPortal = false;
   const [count, setCount] = useState(0);
   const [showBubbling, setShowBubbling] = useState(false);
   const [showModal, setShowModal] = React.useState(false);
+  const [authstatus, setauthstatus] = useState(false);
+  const login = () => {
+    setauthstatus(true);
+  };
   const handleShowMessageClick = () => setShowModal(true)
   const handleCloseModal = () => setShowModal(false)
   const handleShowBubblingClick = () => setShowBubbling(true);
@@ -47,6 +53,7 @@ function App() {
         <Route exact path="/funclifecycle" element={<FuncLifeCycle />}></Route>
         <Route exact path="/hooks" element={<ReactHooks />}></Route>
         <Route exact path="/useref" element={<UseRef />}></Route>
+        <Route exact path="/login" element={<AuthContext.Provider value={{ status: authstatus, login: login }}><Login /></AuthContext.Provider>}></Route>
       </Routes>
     
     </Router>
